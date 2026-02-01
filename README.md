@@ -40,6 +40,36 @@ R2_PUBLIC_URL=https://pub-your-id.r2.dev
 cp -r skills/clawshare ~/.moltbot/skills/
 ```
 
+## Next Steps (Dan)
+
+1. **Set up Cloudflare R2**
+   - Create account at https://cloudflare.com/r2
+   - Create bucket named `clawshare`
+   - Generate R2 API credentials (access key + secret)
+   - Get your account ID
+
+2. **Configure environment**
+   ```bash
+   cd clawshare-repo
+   cp .env.example .env.local
+   # Edit .env.local with your R2 credentials
+   ```
+
+3. **Deploy to Vercel**
+   - Go to https://vercel.com
+   - Import GitHub repo: danieloleary/Clawshare
+   - Add environment variables in Vercel dashboard
+   - Deploy!
+
+4. **Set up domain**
+   - Point `clawshare.io` to Vercel deployment
+   - Or use a free Vercel subdomain
+
+5. **Test end-to-end**
+   - Upload a file via web UI
+   - Copy share link
+   - Download via another Claw
+
 ## Usage
 
 ### Web UI
